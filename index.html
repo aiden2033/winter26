@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,23 +28,23 @@
         .hero {
             text-align: center;
             padding: 60px 20px;
-            background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.2));
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
             border-radius: 20px;
             margin-bottom: 40px;
             backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
         .hero h1 {
             font-size: 3em;
             color: white;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .hero .subtitle {
             font-size: 1.2em;
-            color: rgba(255,255,255,0.9);
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 30px;
         }
 
@@ -58,14 +59,14 @@
             background: white;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .overview-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
 
         .overview-card .icon {
@@ -75,7 +76,7 @@
 
         .tabs {
             display: flex;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             padding: 10px;
             margin-bottom: 30px;
@@ -83,21 +84,121 @@
         }
 
         .tab {
-            flex: 1;
             padding: 15px;
+            flex: 1;
             text-align: center;
             border-radius: 10px;
             cursor: pointer;
             transition: all 0.3s ease;
             color: white;
-            font-weight: bold;
             min-width: 180px;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 0px 5px 0px 0px;
+        }
+
+        .tabs .tab.active {
+            background: white !important;
+            color: #333 !important;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+            font-weight: bold !important;
         }
 
         .tab.active {
-            background: white;
-            color: #333;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background: white !important;
+            color: #333 !important;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        /* Стили для вложенных табов на странице Малайзии */
+        .island-tabs {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .island-tabs .tab {
+            background: rgba(255, 255, 255, 0.8);
+            color: #2c3e50;
+            opacity: 1;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Стили для вложенных табов в секции Лангкави */
+        #langkawi .tabs .tab {
+            background: rgba(255, 255, 255, 0.8) !important;
+            color: #2c3e50 !important;
+            opacity: 1;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        #kuala-lumpur .tabs .tab {
+            background: rgba(255, 255, 255, 0.8) !important;
+            color: #2c3e50 !important;
+            opacity: 1;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #penang .tabs .tab {
+            background: rgba(255, 255, 255, 0.8) !important;
+            color: #2c3e50 !important;
+            opacity: 1;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Unified styling for nested sub-tabs under the Malaysia section */
+        #malaysia .tab-content .tabs .tab {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        #malaysia .tab-content .tabs .tab:last-child {
+            margin-right: 0;
+        }
+
+        #indonesia .tab-content .tabs .tab {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        #indonesia .tab-content .tabs .tab:last-child {
+            margin-right: 0;
+        }
+
+        #comparision .tab-content .tabs .tab {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        #comparision .tab-content .tabs .tab:last-child {
+            margin-right: 0;
+        }
+
+        .island-tabs .tab.active {
+            background: white !important;
+            color: #333 !important;
+            opacity: 1 !important;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
+            font-weight: bold !important;
+        }
+
+        .tab.tab-selected {
+            background: white !important;
+            color: #000 !important;
+            border: 2px solid #667eea !important;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
         }
 
         .tab-content {
@@ -120,7 +221,7 @@
             background: white;
             border-radius: 20px;
             padding: 30px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             margin-top: 35px;
             transition: all 0.3s ease;
             position: relative;
@@ -139,7 +240,7 @@
 
         .route-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
         }
 
         .route-title {
@@ -210,7 +311,7 @@
             background: white;
             border-radius: 20px;
             padding: 30px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             margin-top: 30px;
         }
 
@@ -225,10 +326,10 @@
         /* Existing styles */
         .country-section {
             background: white;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
         }
 
         .country-header {
@@ -249,18 +350,20 @@
         .country-header h2 {
             font-size: 2.5em;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .country-content {
-            padding: 40px;
+            padding: 10px 40px 40px 50px;
         }
 
-        .route-card.malaysia-card, .route-card.indonesia-card {
+        .route-card.malaysia-card,
+        .route-card.indonesia-card {
             background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
             padding: 25px;
             border-radius: 15px;
             margin-bottom: 25px;
+            margin-top: 0%;
             border-left: 5px solid #4ECDC4;
         }
 
@@ -279,7 +382,7 @@
             background: white;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
@@ -287,7 +390,7 @@
             transform: translateY(-3px);
         }
 
-      .photo-placeholder {
+        .photo-placeholder {
             height: 200px;
             background: linear-gradient(135deg, #667eea, #764ba2);
             display: flex;
@@ -305,7 +408,7 @@
             object-fit: cover;
             object-position: center;
         }
-        
+
         .photo-caption {
             padding: 15px;
             text-align: center;
@@ -328,17 +431,32 @@
         }
 
         .location-item {
-            background: rgba(255,255,255,0.8);
+            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .location-name {
-            font-weight: bold;
             color: #2c3e50;
             font-size: 1.2em;
             margin-bottom: 10px;
+        }
+
+        .location-photo {
+            margin: -20px -20px 12px;
+            border-radius: 12px 12px 0 0;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            background: #f0f3f5;
+            box-shadow: none;
+        }
+
+        .location-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .location-details {
@@ -362,13 +480,40 @@
             padding: 25px;
             border-radius: 15px;
             margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .island-name {
             font-size: 1.5em;
             font-weight: bold;
             margin-bottom: 15px;
+        }
+
+        .langkawi-section {
+            display: none;
+        }
+
+        .langkawi-section.active {
+            display: block !important;
+            font-weight: bold !important;
+        }
+
+        .penang-section {
+            display: none;
+        }
+
+        .penang-section.active {
+            display: block !important;
+            font-weight: bold !important;
+        }
+
+        .kl-section {
+            display: none;
+        }
+
+        .kl-section.active {
+            display: block !important;
+            font-weight: bold !important;
         }
 
         .highlight {
@@ -395,11 +540,11 @@
         }
 
         .flight-option {
-            background: rgba(255,255,255,0.9);
+            background: rgba(255, 255, 255, 0.9);
             padding: 15px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
         }
 
         .flight-date {
@@ -422,15 +567,15 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
-            margin: 20px 0;
+            margin: 20px 0 40px 0px;
         }
 
         .budget-item {
-            background: rgba(255,255,255,0.9);
+            background: rgba(255, 255, 255, 0.9);
             padding: 15px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .price {
@@ -443,7 +588,7 @@
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             margin: 40px 0;
         }
 
@@ -488,7 +633,8 @@
             overflow: hidden;
         }
 
-        th, td {
+        th,
+        td {
             padding: 15px;
             text-align: left;
             border-bottom: 1px solid #ecf0f1;
@@ -509,11 +655,11 @@
         }
 
         .highlight-kl {
-            background: linear-gradient(45deg, rgba(255,107,107,0.1), rgba(255,167,38,0.1));
+            background: linear-gradient(45deg, rgba(255, 107, 107, 0.1), rgba(255, 167, 38, 0.1));
         }
 
         .highlight-sg {
-            background: linear-gradient(45deg, rgba(78,205,196,0.1), rgba(68,160,141,0.1));
+            background: linear-gradient(45deg, rgba(78, 205, 196, 0.1), rgba(68, 160, 141, 0.1));
         }
 
         .recommendation {
@@ -523,7 +669,7 @@
             border-radius: 20px;
             text-align: center;
             margin-top: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .recommendation h3 {
@@ -535,11 +681,12 @@
             .hero h1 {
                 font-size: 2em;
             }
-            
-            .location-grid, .comparison-grid {
+
+            .location-grid,
+            .comparison-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .comparison-table {
                 overflow-x: auto;
             }
@@ -554,6 +701,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="hero">
@@ -586,13 +734,17 @@
         </div>
 
         <div class="tabs">
-            <div class="tab active" onclick="showTab('routes')">🗺️ Маршруты</div>
-            <div class="tab" onclick="showTab('malaysia')"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/1280px-Flag_of_Malaysia.svg.png" alt="Флаг Малайзии" width="20"> Малайзия</div>
-            <div class="tab" onclick="showTab('indonesia')"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/1280px-Flag_of_Indonesia.svg.png" alt="Флаг Малайзии" width="20"> Индонезия</div>
+            <div class="tab active" onclick="showTab('malaysia')"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/1280px-Flag_of_Malaysia.svg.png"
+                    alt="Флаг Малайзии" width="20"> Малайзия</div>
+            <div class="tab" onclick="showTab('routes')">🗺️ Маршруты</div>
+            <div class="tab" onclick="showTab('indonesia')"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/1280px-Flag_of_Indonesia.svg.png"
+                    alt="Флаг Малайзии" width="20"> Индонезия</div>
             <div class="tab" onclick="showTab('comparison')">⚖️ Что лучше?</div>
         </div>
 
-        <div id="routes" class="tab-content active">
+        <div id="routes" class="tab-content">
             <div class="detailed-table">
                 <div class="table-title">🗺️ Малайзия Зима 2024-2025</div>
                 <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem; color: #7f8c8d;">
@@ -601,14 +753,14 @@
             </div>
 
             <div class="comparison-grid">
-              
+
                 <!-- Куала-Лумпур маршрут -->
                 <div class="route-card">
                     <div class="route-title">
                         <div class="hub-icon kl-icon">🏢</div>
                         Хаб: Куала-Лумпур
                     </div>
-                    
+
                     <div class="route-path">
                         <div class="path-step">
                             📍 Москва <span class="arrow">✈️</span> Лангкави
@@ -635,7 +787,7 @@
                         <div class="hub-icon sg-icon">🦁</div>
                         Хаб: Сингапур
                     </div>
-                    
+
                     <div class="route-path">
                         <div class="path-step">
                             📍 Москва <span class="arrow">✈️</span> Лангкави
@@ -695,9 +847,11 @@
                         </tr>
                         <tr>
                             <td><strong>Статья + карта<br>
-                              <a href="https://freedom-travel.kz/media/guide/dostoprimechatelnosti-kuala-lumpura/">KUL</a><br>
-                              <a href="https://freedom-travel.kz/media/guide/dostoprimechatelnosti-singapura/">SIN</a>
-                            </strong></td>
+                                    <a
+                                        href="https://freedom-travel.kz/media/guide/dostoprimechatelnosti-kuala-lumpura/">KUL</a><br>
+                                    <a
+                                        href="https://freedom-travel.kz/media/guide/dostoprimechatelnosti-singapura/">SIN</a>
+                                </strong></td>
                             <td>Petronas Towers, парк KLCC, Золотой треугольник, пещеры Бату(ебанись)</td>
                             <td>Облачный лес (отвал), Marina Bay, Gardens by the Bay (дичь кислотная), Букит Тимах</td>
                         </tr>
@@ -706,10 +860,11 @@
             </div>
         </div>
 
-        <div id="malaysia" class="tab-content">
+        <div id="malaysia" class="tab-content active">
             <div class="country-section">
                 <div class="country-header malaysia-header">
-                    <h2><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/1280px-Flag_of_Malaysia.svg.png" alt="Флаг Малайзии" width="40"> МАЛАЙЗИЯ</h2>
+                    <h2><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/1280px-Flag_of_Malaysia.svg.png"
+                            alt="Флаг Малайзии" width="40"> МАЛАЙЗИЯ</h2>
                     <p>Цивилизованная Азия с сюрпризами</p>
                 </div>
                 <div class="country-content">
@@ -721,32 +876,43 @@
 
                     <div class="photo-grid">
                         <div class="photo-card">
-                            <div class="photo-placeholder"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/dd/d0/62/photo0jpg.jpg"></div>
-                            <div class="photo-caption">�️Pantai Cenang, Лангкави</div>
+                            <div class="photo-placeholder"><img
+                                    src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/dd/d0/62/photo0jpg.jpg">
+                            </div>
+                            <div class="photo-caption">🏝️Pantai Cenang, Лангкави</div>
                             <div class="photo-description">Основной пляж острова с белым песком</div>
                         </div>
                         <div class="photo-card">
-                            <div class="photo-placeholder"><img src="https://phototravelguide.ru/wp-content/uploads/2011/10/nebesnyj-most-langkavi-01.jpg"></div>
+                            <div class="photo-placeholder"><img
+                                    src="https://phototravelguide.ru/wp-content/uploads/2011/10/nebesnyj-most-langkavi-01.jpg">
+                            </div>
                             <div class="photo-caption">🌉Sky Bridge, Лангкави</div>
                             <div class="photo-description">Висячий мост в облаках</div>
                         </div>
                         <div class="photo-card">
-                            <div class="photo-placeholder"><img src="https://images.squarespace-cdn.com/content/v1/6342a6211e9eed430bd9353e/1666727260419-3WQB2409LZB7GVTQ812N/image-asset.jpeg"></div>
+                            <div class="photo-placeholder"><img
+                                    src="https://images.squarespace-cdn.com/content/v1/6342a6211e9eed430bd9353e/1666727260419-3WQB2409LZB7GVTQ812N/image-asset.jpeg">
+                            </div>
                             <div class="photo-caption">🗼Petronas Towers</div>
                             <div class="photo-description">Символ Куала-Лумпура</div>
                         </div>
                         <div class="photo-card">
-                            <div class="photo-placeholder"><img src="https://www.panteon.ru/upload/catalogcat/88899219/tea-house-cameron-highlands-1024x683.jpg"></div>
+                            <div class="photo-placeholder"><img
+                                    src="https://www.panteon.ru/upload/catalogcat/88899219/tea-house-cameron-highlands-1024x683.jpg">
+                            </div>
                             <div class="photo-caption">🌿Камерон Хайлендс</div>
                             <div class="photo-description">Мох. Чайные плантации. Зелени много</div>
                         </div>
                         <div class="photo-card">
-                            <div class="photo-placeholder"><img src="https://youtravel.me/upload/medialibrary/4b2/0k6pkinbmlxji8inoa8fzokeupxhqr44.jpg"></div>
+                            <div class="photo-placeholder"><img
+                                    src="https://youtravel.me/upload/medialibrary/4b2/0k6pkinbmlxji8inoa8fzokeupxhqr44.jpg">
+                            </div>
                             <div class="photo-caption">🦅Геопарк Килим</div>
                             <div class="photo-description">В ЮНЕСКО. Крокодилы, летучие мыши, вараны (Д-АНУ)</div>
                         </div>
                         <div class="photo-card">
-                            <div class="photo-placeholder"><img src="https://www.mypenang.gov.my/uploads/page/65/images/image.jpeg"></div>
+                            <div class="photo-placeholder"><img
+                                    src="https://www.mypenang.gov.my/uploads/page/65/images/image.jpeg"></div>
                             <div class="photo-caption">🥡Пенанг</div>
                             <div class="photo-description">Лучшая уличная еда в Азии</div>
                         </div>
@@ -757,21 +923,26 @@
                         <div class="location-item">
                             <div class="location-name">🏝️ Лангкави</div>
                             <div class="location-details">
-                                Белые пляжи как в рекламе Баунти. Но если будут волны, то вода станет мутнее чем в Москва-реке, но чистая правда! Канатка с офигенными закатами. Водопадов очень много. И самое главное — duty free алкоголь!
+                                Белые пляжи как в рекламе Баунти. Но если будут волны, то вода станет мутнее чем в
+                                Москва-реке, но чистая правда! Канатка с офигенными закатами. Водопадов очень много. И
+                                самое главное — duty free алкоголь!
                             </div>
                             <div class="days">7-9 дней</div>
                         </div>
                         <div class="location-item">
                             <div class="location-name">🏙️ Куала-Лумпур</div>
                             <div class="location-details">
-                                Башни-близнецы Петронас, ботанические сады, много еды, есть вероятность попасть в рабство, бары на крышах небоскребов. Пещеры с дикими обезьянами в 30 минутах езды.
+                                Башни-близнецы Петронас, ботанические сады, много еды, есть вероятность попасть в
+                                рабство, бары на крышах небоскребов. Пещеры с дикими обезьянами в 30 минутах езды.
                             </div>
                             <div class="days">3-4 дня</div>
                         </div>
                         <div class="location-item">
                             <div class="location-name">🍜 Пенанг (Джорджтаун)</div>
                             <div class="location-details">
-                                Джорджтаун в ЮНЕСКО за счёт колониальной архитектуры. Говорят, что тут ебать какая вкусная уличная еда. Граффити на каждом углу, старые колониальные здания и пляж, где можно расслабиться после обжираловы.
+                                Джорджтаун в ЮНЕСКО за счёт колониальной архитектуры. Говорят, что тут ебать какая
+                                вкусная уличная еда. Граффити на каждом углу, старые колониальные здания и пляж, где
+                                можно расслабиться после обжираловы.
                             </div>
                             <div class="days">4-5 дней</div>
                         </div>
@@ -779,11 +950,14 @@
 
                     <div class="highlight">
                         <h3>Что делать-то вообще?</h3>
-                        <p><strong>Пляжи:</strong> Лежим, купаемся, катаемся на парашюте за катером. Дайвинг с рыбками недалеко от берега и много спотов для снорклинга.</p>
-                        
-                        <p><strong>Движуха:</strong> Походы в джунгли к водопадам, висячий мост в облаках. Кто совсем отчаянный — может слетать на самую высокую гору в Малайзии.</p>
-                        
-                        <p><strong>Вечером:</strong> В Куала-Лумпуре крутые бары с видом на город. На Лангкави — пляжные бары прямо у воды.</p>
+                        <p><strong>Пляжи:</strong> Лежим, купаемся, катаемся на парашюте за катером. Дайвинг с рыбками
+                            недалеко от берега и много спотов для снорклинга.</p>
+
+                        <p><strong>Движуха:</strong> Походы в джунгли к водопадам, висячий мост в облаках. Кто совсем
+                            отчаянный — может слетать на самую высокую гору в Малайзии.</p>
+
+                        <p><strong>Вечером:</strong> В Куала-Лумпуре крутые бары с видом на город. На Лангкави — пляжные
+                            бары прямо у воды.</p>
                     </div>
 
                     <div class="route-card malaysia-card">
@@ -806,12 +980,15 @@
                     </div>
 
                     <div class="warning">
-                        <strong>Про документы:</strong> Визу не надо (если меньше 30 дней), но надо за 3 дня до поездки заполнить анкету онлайн. На границе могут попросить показать обратный билет и что у есть деньги на весь срок пребывания.
+                        <strong>Про документы:</strong> Визу не надо (если меньше 30 дней), но надо за 3 дня до поездки
+                        заполнить анкету онлайн. На границе могут попросить показать обратный билет и что у есть деньги
+                        на весь срок пребывания.
                     </div>
 
                     <div class="route-card indonesia-card">
                         <h3>Про погоду</h3>
-                        <p>Если можно это так назвать, то сезон дождей с сентября по март. Зимой в основном на восточном побережье.</p>
+                        <p>Если можно это так назвать, то сезон дождей с сентября по март. Зимой в основном на восточном
+                            побережье.</p>
                     </div>
 
                     <div class="budget-breakdown">
@@ -824,6 +1001,374 @@
                             <div>штраф за скутер без прав</div>
                         </div>
                     </div>
+
+                    <!-- Islands Section -->
+                    <div class="table-title">🏝️ Подробнее 🏝️</div>
+
+                    <!-- Island tabs -->
+                    <!-- Island tabs -->
+                    <div class="island-tabs">
+                        <div class="tab active" onclick="showIslandTab('langkawi')">🌴 Лангкави</div>
+                        <div class="tab" onclick="showIslandTab('penang')">🍜 Пенанг</div>
+                        <div class="tab" onclick="showIslandTab('kuala-lumpur')">🏙️ Куала-Лумпур</div>
+                    </div>
+
+                    <!-- Langkawi content -->
+                    <div id="langkawi" class="tab-content active">
+                        <!-- Beach/Attractions sub-tabs -->
+                        <div class="tabs" style="margin-bottom: 20px; background: rgba(255,255,255,0.15);">
+                            <div class="tab active" onclick="showLangkawiSection('beaches')" style="min-width: 120px;">
+                                🏖️ Пляжи</div>
+                            <div class="tab" onclick="showLangkawiSection('attractions')" style="min-width: 120px;">🗺️
+                                Места</div>
+                        </div>
+
+                        <!-- Beaches section -->
+                        <div id="beaches" class="langkawi-section active">
+                            <div class="island-card" style="margin-bottom: 30px;">
+                                <div class="island-name">🏖️ Пляжи Лангкави</div>
+                                <div class="location-grid">
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/dd/d0/62/photo0jpg.jpg"
+                                                alt="Ченанг (Сенанг)"></div>
+                                        <div class="location-name">Ченанг (Сенанг)</div>
+                                        <div class="location-details">Основной туристический пляж с развитой
+                                            инфраструктурой и множеством кафе</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://lh5.googleusercontent.com/p/AF1QipPHMaAxjXFDEuxTuUXaMHCTnVByGJprD15GnE3k=s1600"
+                                                alt="Pantai Tanjung Rhu"></div>
+                                        <div class="location-name">Pantai Tanjung Rhu</div>
+                                        <div class="location-details">Пляж с видом на Тайланд, живописные виды и
+                                            спокойная атмосфера. Частично открыт простым смертным, плавать можно только
+                                            в западной части</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://media1.thrillophilia.com/filestore/toerwell9gfpo9rpy9acbkcrcuyu_shutterstock_533553328.jpg?w=400&dpr=2"
+                                                alt="Pantai Tengah (Тенгах)"></div>
+                                        <div class="location-name">Pantai Tengah (Тенгах)</div>
+                                        <div class="location-details">Более спокойный пляж рядом с Ченангом</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://danroundtheworld.com/wp-content/uploads/2024/12/View-Sandy-Skulls-Beach-Langkawi-Malaysia-scaled.jpg"
+                                                alt="Pantai Pasir Tengkorak"></div>
+                                        <div class="location-name">Pantai Pasir Tengkorak</div>
+                                        <div class="location-details">Skull Sand Beach - уединенный пляж с
+                                            интересным названием</div>
+                                    </div>
+                                </div>
+
+                                <div class="warning">
+                                    <strong>Менее популярные пляжи:</strong>
+                                    <ul>
+                                        <li><strong>Pantai Pasir Hitam (Black Sand Beach)</strong> - дикий, не очень
+                                            подходит для купания</li>
+                                        <li><strong>Pantai Kok</strong> - не очень популярен среди туристов</li>
+                                        <li><strong>Lagenda Beach</strong> - не рекомендуется для купания</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Attractions section -->
+                        <div id="attractions" class="langkawi-section">
+                            <div class="island-card">
+                                <div class="island-name">🗺️ Прикольные места</div>
+                                <div class="location-grid">
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://phototravelguide.ru/wp-content/uploads/2011/10/nebesnyj-most-langkavi-01.jpg"
+                                                alt=""></div>
+                                        <div class="location-name">🌉 Sky Bridge</div>
+                                        <div class="location-details">Знаменитый подвесной мост в облаках с
+                                            потрясающими видами на остров</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://live.staticflickr.com/65535/54258063651_0a3eb5a5de_o.jpg"
+                                                alt=""></div>
+                                        <div class="location-name">🏛️ Буддистский храм Ват Кох Ванарам</div>
+                                        <div class="location-details">Wat Koh Wanaram - храм с красивой архитектурой
+                                            и спокойной атмосферой</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/e1/ee/b9/telaga-tujuh-waterfalls.jpg?w=1200&h=1200&s=1"
+                                                alt=""></div>
+                                        <div class="location-name">💧 Водопад 7 колодцев</div>
+                                        <div class="location-details">В часе езды от Sky Bridge, популярное место
+                                            для походов и освежения</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://langkawi-travel.ru/wp-content/uploads/2020/03/olen-wild-park.jpg"
+                                                alt=""></div>
+                                        <div class="location-name">🦁 Лангкави Wildlife</div>
+                                        <div class="location-details">Зоопарк с местными и экзотическими животными
+                                        </div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://thumbs.dreamstime.com/b/старые-з-ания-в-центре-горо-а-куа-аа-лумпур-34586323.jpg"
+                                                alt=""></div>
+                                        <div class="location-name">🏘️ Город Куах</div>
+                                        <div class="location-details">Очень необычные домики и традиционная
+                                            архитектура</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://langkawi-travel.ru/wp-content/uploads/2020/02/view-gunung-raya-min.jpg"
+                                                alt=""></div>
+                                        <div class="location-name">⛰️ Гора Гунунг Рая</div>
+                                        <div class="location-details">Самая высокая точка острова с панорамными видами
+                                        </div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://media-cdn.tripadvisor.com/media/photo-s/09/66/bd/21/lake-of-the-pregnant.jpg"
+                                                alt=""></div>
+                                        <div class="location-name">🤰 Остров Беременной девы</div>
+                                        <div class="location-details">Легендарный остров с интересной историей и
+                                            красивой природой</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://tury.ru/turyclub.img.php?src=7786c37b1057e8daa197cb1d7cc8aec7%2FUgeV1IiC%2FzSo0Lgp9W6.jpg&img=18f274de76e7b33fa392b9f26e191d8d"
+                                                alt=""></div>
+                                        <div class="location-name">🦇 Пещера летучих мышей</div>
+                                        <div class="location-details">Уникальная пещера с колонией летучих мышей
+                                        </div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://media-cdn.tripadvisor.com/media/photo-s/0a/90/c6/a1/gece-pazari.jpg"
+                                                alt=""></div>
+                                        <div class="location-name">🌙 Ночной рынок</div>
+                                        <div class="location-details">Проходит по четвергам, отличное место для
+                                            местной еды и сувениров</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Penang content -->
+                    <div id="penang" class="tab-content">
+                        <!-- Beach/Attractions sub-tabs -->
+                        <div class="tabs" style="margin-bottom: 20px; background: rgba(255,255,255,0.15);">
+                            <div class="tab active" onclick="showPenangSection('penang-beaches')"
+                                style="min-width: 120px;">🏖️ Пляжи</div>
+                            <div class="tab" onclick="showPenangSection('penang-attractions')"
+                                style="min-width: 120px;">🗺️ Места</div>
+                        </div>
+
+                        <!-- Penang Beaches section -->
+                        <div id="penang-beaches" class="penang-section active">
+                            <div class="island-card" style="margin-bottom: 30px;">
+                                <div class="island-name">🏖️ Пляжи Пенанга</div>
+                                <div class="location-grid">
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://www.awaygowe.com/wp-content/uploads/2019/10/batu-ferringhi-reasons-featured2.webp">
+                                        </div>
+                                        <div class="location-name">Бату Ферринги (Batu Ferringhi)</div>
+                                        <div class="location-details">Главный пляж Пенанга с отелями, ресторанами и
+                                            водными видами спорта</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://beachsearcher.ru/images/beaches/458201082/MY201082.jpg"
+                                                alt=""></div>
+                                        <div class="location-name">Танджунг Бунга (Tanjung Bungah)</div>
+                                        <div class="location-details">Спокойный пляж с чистой водой, менее людный
+                                            чем Бату Ферринги</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://www.penang-insider.com/livingpenang/wp-content/uploads/2021/05/Monkey_Beach_Penang_featured-1-of-1.jpg"
+                                                alt=""></div>
+                                        <div class="location-name">Монки Бич (Monkey Beach)</div>
+                                        <div class="location-details">Уединенный пляж в национальном парке с
+                                            обезьянами</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Penang Attractions section -->
+                        <div id="penang-attractions" class="penang-section">
+                            <div class="island-card">
+                                <div class="island-name">🗺️ Достопримечательности Пенанга</div>
+                                <div class="location-grid">
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                            src="https://advantiko.com/wp-content/uploads/2020/02/penang-georgetown.jpg"
+                                            alt=""></div>
+                                        <div class="location-name">🏛️ Джорджтаун (ЮНЕСКО)</div>
+                                        <div class="location-details">Исторический центр с колониальной
+                                            архитектурой, внесенный в список ЮНЕСКО</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://mytestsite1212.files.wordpress.com/2018/06/dsc0893.jpg"
+                                                alt=""></div>
+                                        <div class="location-name">🎨 Стрит-арт</div>
+                                        <div class="location-details">Знаменитые граффити и муралы на стенах старого
+                                            города</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://tudam.ru/wp-content/uploads/2017/07/20160323-IMG_9362.jpg"></div>
+                                        <div class="location-name">🍜 Уличная еда</div>
+                                        <div class="location-details">Лучшая уличная еда в Азии - Penang Assam
+                                            Laksa, Char Kway Teow. 1кг шкварок за 100 рублей</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/1b/3f/ac/caption.jpg?w=800&h=400&s=1"
+                                                alt=""></div>
+                                        <div class="location-name">🏔️ Пенанг Хилл</div>
+                                        <div class="location-details">Подъем на фуникулере на холм с панорамными
+                                            видами на остров</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Kek_Lok_Si_at_dusk.jpg/1200px-Kek_Lok_Si_at_dusk.jpg"
+                                                alt=""></div>
+                                        <div class="location-name">🏛️ Храм Кек Лок Си</div>
+                                        <div class="location-details">Один из крупнейших буддийских храмов в
+                                            Юго-Восточной Азии, кек)</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/482735779.jpg?k=18166132a6c7a943e112228977413840ac2fff64c4a6c82f9cfc44b1439c6ae4&o=&hp=1"
+                                                alt=""></div>
+                                        <div class="location-name">🌺 Ботанический сад</div>
+                                        <div class="location-details">Тропический сад с водопадами и дикими
+                                            обезьянами</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Armenian_street-penang-095749145.jpg"
+                                                alt=""></div>
+                                        <div class="location-name">🏪 Армянская улица</div>
+                                        <div class="location-details">Историческая улица с антикварными магазинами и
+                                            кафе</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-photo"><img
+                                                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/fc/30/0e/gurney-paragon-shopping.jpg?w=1200&h=-1&s=1"
+                                                alt=""></div>
+                                        <div class="location-name">🛍️ Гурней Плаза</div>
+                                        <div class="location-details">Крупнейший торговый центр Пенанга. Пошопиться можно💅</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kuala Lumpur content -->
+                    <div id="kuala-lumpur" class="tab-content">
+                        <!-- Beach/Attractions sub-tabs -->
+                        <div class="tabs" style="margin-bottom: 20px; background: rgba(255,255,255,0.15);">
+                            <div class="tab active" onclick="showKLSection('kl-attractions')" style="min-width: 120px;">
+                                🗺️ Места</div>
+                            <div class="tab" onclick="showKLSection('kl-areas')" style="min-width: 120px;">🏙️
+                                Районы</div>
+                        </div>
+
+                        <!-- KL Attractions section -->
+                        <div id="kl-attractions" class="kl-section active">
+                            <div class="island-card">
+                                <div class="island-name">🗺️ Достопримечательности Куала-Лумпура</div>
+                                <div class="location-grid">
+                                    <div class="location-item">
+                                        <div class="location-name">🗼 Башни Петронас</div>
+                                        <div class="location-details">Символ города - близнецы-небоскребы с обзорной
+                                            площадкой</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-name">🌳 Парк KLCC</div>
+                                        <div class="location-details">Зеленая зона вокруг башен Петронас с фонтанами
+                                            и дорожками</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-name">🕌 Пещеры Бату</div>
+                                        <div class="location-details">Храмовый комплекс в известняковых пещерах с
+                                            огромной статуей (30 мин от центра)</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-name">🏛️ Площадь Мердека</div>
+                                        <div class="location-details">Историческая площадь с британской колониальной
+                                            архитектурой</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-name">🌺 Центральный рынок</div>
+                                        <div class="location-details">Исторический крытый рынок с сувенирами и
+                                            местной едой</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-name">🚝 Башня KL Tower</div>
+                                        <div class="location-details">Телекоммуникационная башня с обзорной
+                                            площадкой и рестораном</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-name">🏞️ Парк птиц</div>
+                                        <div class="location-details">Один из крупнейших парков птиц в мире с
+                                            тропическими видами</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-name">🌃 Heli Lounge Bar</div>
+                                        <div class="location-details">Бар на крыше с видом на башни Петронас (открыт
+                                            до 1:00)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- KL Areas section -->
+                        <div id="kl-areas" class="kl-section">
+                            <div class="island-card">
+                                <div class="island-name">🏙️ Районы Куала-Лумпура</div>
+                                <div class="location-grid">
+                                    <div class="location-item">
+                                        <div class="location-name">💎 Золотой треугольник</div>
+                                        <div class="location-details">Деловой центр с башнями Петронас, торговыми
+                                            центрами и барами</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-name">🏛️ Старый город</div>
+                                        <div class="location-details">Исторический район с колониальными зданиями и
+                                            храмами</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-name">🏮 Чайнатаун</div>
+                                        <div class="location-details">Китайский квартал с рынками, храмами и уличной
+                                            едой</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-name">🕌 Маленькая Индия</div>
+                                        <div class="location-details">Индийский квартал с текстилем, специями и
+                                            индийской кухней</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-name">🛍️ Букит Бинтанг</div>
+                                        <div class="location-details">Район развлечений с торговыми центрами,
+                                            ресторанами и ночной жизнью</div>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-name">🌿 Бангсар</div>
+                                        <div class="location-details">Модный район с кафе, барами и художественными
+                                            галереями</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -831,7 +1376,8 @@
         <div id="indonesia" class="tab-content">
             <div class="country-section">
                 <div class="country-header indonesia-header">
-                    <h2><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/1280px-Flag_of_Indonesia.svg.png" alt="Флаг Малайзии" width="35"> ИНДОНЕЗИЯ</h2>
+                    <h2><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/1280px-Flag_of_Indonesia.svg.png"
+                            alt="Флаг Индонезии" width="40"> ИНДОНЕЗИЯ</h2>
                     <p>Приключения без толп туристов</p>
                 </div>
                 <div class="country-content">
@@ -843,32 +1389,41 @@
 
                     <div class="photo-grid">
                         <div class="photo-card">
-                            <div class="photo-placeholder"><img src="https://static.mybalitrips.com/tickets/ijen/525-73_FThF5Yl.jpg"></div>
+                            <div class="photo-placeholder"><img
+                                    src="https://static.mybalitrips.com/tickets/ijen/525-73_FThF5Yl.jpg"></div>
                             <div class="photo-caption">🌋Вулкан Ijen, Ява</div>
                             <div class="photo-description">Синие огни от лавы</div>
                         </div>
                         <div class="photo-card">
-                            <div class="photo-placeholder"><img src="https://www.svoiludi.ru/images/tb/4781/komodo-16957137487356_w687h357.jpg"></div>
+                            <div class="photo-placeholder"><img
+                                    src="https://www.svoiludi.ru/images/tb/4781/komodo-16957137487356_w687h357.jpg">
+                            </div>
                             <div class="photo-caption">🐉Драконы Комодо</div>
                             <div class="photo-description">Реальные 3-метровые ящеры</div>
                         </div>
                         <div class="photo-card">
-                            <div class="photo-placeholder"><img src="https://i.pinimg.com/736x/df/bf/3b/dfbf3bc714551bd3cc54d466398d4863.jpg"></div>
+                            <div class="photo-placeholder"><img
+                                    src="https://i.pinimg.com/736x/df/bf/3b/dfbf3bc714551bd3cc54d466398d4863.jpg"></div>
                             <div class="photo-caption">�️Pink Beach, Флорес</div>
                             <div class="photo-description">Пляж с розовым песком</div>
                         </div>
                         <div class="photo-card">
-                            <div class="photo-placeholder"><img src="https://nomadz.life/wp-content/uploads/2018/11/gili-islands2.jpg"></div>
+                            <div class="photo-placeholder"><img
+                                    src="https://nomadz.life/wp-content/uploads/2018/11/gili-islands2.jpg"></div>
                             <div class="photo-caption">🐢Гили Траванган</div>
                             <div class="photo-description">Черепашки плавают у берега</div>
                         </div>
                         <div class="photo-card">
-                            <div class="photo-placeholder"><img src="https://www.eden-tour.ru/wp-content/uploads/2019/03/калимантан-борнео-8.jpg"></div>
+                            <div class="photo-placeholder"><img
+                                    src="https://www.eden-tour.ru/wp-content/uploads/2019/03/калимантан-борнео-8.jpg">
+                            </div>
                             <div class="photo-caption">🦧Орангутаны Борнео</div>
                             <div class="photo-description">узнали себя утром?с да</div>
                         </div>
                         <div class="photo-card">
-                            <div class="photo-placeholder"><img src="https://diveclub.ru/view/images/upload/nicedit/194235885scd0419_todd-winner-97a0838.jpg"></div>
+                            <div class="photo-placeholder"><img
+                                    src="https://diveclub.ru/view/images/upload/nicedit/194235885scd0419_todd-winner-97a0838.jpg">
+                            </div>
                             <div class="photo-caption">🌊Дайвинг с мантами(реально)</div>
                             <div class="photo-description">Гиганты</div>
                         </div>
@@ -877,25 +1432,31 @@
                     <div class="location-grid">
                         <div class="island-card">
                             <div class="island-name">🌴 Ломбок</div>
-                            <div>Бали, но без толп русских туристов. Спокойные пляжи, большой вулкан для восхождения, волны для серфа. Билет: 42 тысячи рублей.</div>
+                            <div>Бали, но без толп русских туристов. Спокойные пляжи, большой вулкан для восхождения,
+                                волны для серфа. Билет: 42 тысячи рублей.</div>
                         </div>
                         <div class="island-card">
                             <div class="island-name">🦧 Калимантан (Борнео)</div>
-                            <div>Джунгли как в фильмах про Индиану Джонса. Орангутаны в дикой природе, дайвинг мирового уровня. Это уже для тех, кто не боится не вернуться.</div>
+                            <div>Джунгли как в фильмах про Индиану Джонса. Орангутаны в дикой природе, дайвинг мирового
+                                уровня. Это уже для тех, кто не боится не вернуться.</div>
                         </div>
                         <div class="island-card">
                             <div class="island-name">🐉 Флорес</div>
-                            <div>Тут живут ЕБАТЬ ДРАКОНЫ Комодо — почти динозавры! Плюс розовый пляж. Дайвинг с мантами размером с камаз.</div>
+                            <div>Тут живут ЕБАТЬ ДРАКОНЫ Комодо — почти динозавры! Плюс розовый пляж. Дайвинг с мантами
+                                размером с камаз.</div>
                         </div>
                     </div>
 
                     <div class="highlight">
                         <h3>Что делать-то вообще?</h3>
-                        <p><strong>На островах Гили:</strong> Ну тут голубая лагуна, если вы понимаете о чем я, ещё и черепахи плавают рядом с тобой. Каждый день пляжные вечеринки.</p>
-                        
-                        <p><strong>Для активностей:</strong> Лазить на действительно ОГРОМНЫЕ вулканы и смотреть на синюю лаву. Серфинг на разных уровнях сложности.</p>
-                        
-                        <p><strong>Дайвинг:</strong>Ну это специфично. Можно жить на лодке несколько дней и нырять в ебейшие места Акулы, манты, рыба-молот. Есть шанс не вынырнуть, но красиво</p>
+                        <p><strong>На островах Гили:</strong> Ну тут голубая лагуна, если вы понимаете о чем я, ещё и
+                            черепахи плавают рядом с тобой. Каждый день пляжные вечеринки.</p>
+
+                        <p><strong>Для активностей:</strong> Лазить на действительно ОГРОМНЫЕ вулканы и смотреть на
+                            синюю лаву. Серфинг на разных уровнях сложности.</p>
+
+                        <p><strong>Дайвинг:</strong>Ну это специфично. Можно жить на лодке несколько дней и нырять в
+                            ебейшие места Акулы, манты, рыба-молот. Есть шанс не вынырнуть, но красиво</p>
                     </div>
 
                     <div class="route-card indonesia-card">
@@ -918,12 +1479,14 @@
                     </div>
 
                     <div class="warning">
-                        <strong>Документы проще:</strong> Виза в аэропорту за 35 долларов. Паспорт должен быть свежий (действовать еще 6 месяцев).
+                        <strong>Документы проще:</strong> Виза в аэропорту за 35 долларов. Паспорт должен быть свежий
+                        (действовать еще 6 месяцев).
                     </div>
 
                     <div class="route-card indonesia-card">
                         <h3>Про погоду</h3>
-                        <p>В декабре-январе начинается сезон дождей, но это не как у нас — покапает полчаса и солнце снова. В восточной части (там где драконы) вообще сухо.</p>
+                        <p>В декабре-январе начинается сезон дождей, но это не как у нас — покапает полчаса и солнце
+                            снова. В восточной части (там где драконы) вообще сухо.</p>
                     </div>
 
                     <div class="budget-breakdown">
@@ -941,69 +1504,79 @@
         </div>
 
         <div id="comparison" class="tab-content">
-            <div class="comparison-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Что сравниваем</th>
-                            <th><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/1280px-Flag_of_Malaysia.svg.png" alt="Флаг Малайзии" width="20"> Малайзия</th>
-                            <th><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/1280px-Flag_of_Indonesia.svg.png" alt="Флаг Малайзии" width="20"> Индонезия</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>☀️Погода</strong></td>
-                            <td>Дождики на востоке</td>
-                            <td>Дождики на востоке</td>
-                        </tr>
-                        <tr>
-                            <td><strong>⛱ Пляжи</strong></td>
-                            <td>Дефолт баунти белые пляжи</td>
-                            <td>Ебать даже розовые есть</td>
-                        </tr>
-                        <tr>
-                            <td><strong>🛵Приключения</strong></td>
-                            <td>Умеренные: джунгли, дайвинг, города</td>
-                            <td>Хардкор полный: вулканы, драконы, дикие острова</td>
-                        </tr>
-                        <tr>
-                            <td><strong>🥂Тусовки</strong></td>
-                            <td>Цивильные бары и клубы</td>
-                            <td>Поход в бичклаб каждую ночь</td>
-                        </tr>
-                        <tr>
-                            <td><strong>📇Документы</strong></td>
-                            <td>РОССИЯ ВПЕРЁД БЕЗВИЗ</td>
-                            <td>Виза в аэропорту за 35$</td>
-                        </tr>
-                        <tr>
-                            <td><strong>🎫Билеты</strong></td>
-                            <td>От 36 тысяч рублей</td>
-                            <td>От 31 тысяч рублей</td>
-                        </tr>
-                        <tr>
-                            <td><strong>💵Сколько ~тратить в день</strong></td>
-                            <td>$95</td>
-                            <td>$70</td>
-                        </tr>
-                        <tr>
-                            <td><strong>🎖Сложность</strong></td>
-                            <td>+- Легко, все понятно</td>
-                            <td>Надо тщательно маршрут строить</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <div class="country-section">
+                <div class="country-content">
+                    <div class="comparison-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Что сравниваем</th>
+                                    <th><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/1280px-Flag_of_Malaysia.svg.png"
+                                            alt="Флаг Малайзии" width="20"> Малайзия</th>
+                                    <th><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/1280px-Flag_of_Indonesia.svg.png"
+                                            alt="Флаг Малайзии" width="20"> Индонезия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>☀️Погода</strong></td>
+                                    <td>Дождики на востоке</td>
+                                    <td>Дождики на востоке</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>⛱ Пляжи</strong></td>
+                                    <td>Дефолт баунти белые пляжи</td>
+                                    <td>Ебать даже розовые есть</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>🛵Приключения</strong></td>
+                                    <td>Умеренные: джунгли, дайвинг, города</td>
+                                    <td>Хардкор полный: вулканы, драконы, дикие острова</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>🥂Тусовки</strong></td>
+                                    <td>Цивильные бары и клубы</td>
+                                    <td>Поход в бичклаб каждую ночь</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>📇Документы</strong></td>
+                                    <td>РОССИЯ ВПЕРЁД БЕЗВИЗ</td>
+                                    <td>Виза в аэропорту за 35$</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>🎫Билеты</strong></td>
+                                    <td>От 36 тысяч рублей</td>
+                                    <td>От 31 тысяч рублей</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>💵Сколько ~тратить в день</strong></td>
+                                    <td>$95</td>
+                                    <td>$70</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>🎖Сложность</strong></td>
+                                    <td>+- Легко, все понятно</td>
+                                    <td>Надо тщательно маршрут строить</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-            <div class="pro-tip">
-                <h3></h3>
-                <p><strong>Если расслабиться и не париться:</strong> Малайзия. Всё работает, много кто говорит по-английски, удобно перемещаться.</p>
-                
-                <p><strong>Если приключений на жопу:</strong> Индонезия. Дикая природа, меньше туристов, больше аутентики.</p>
-                
-                <p><strong>А можно и так:</strong> Половину времени в Малайзии отдохнуть, половину в Индонезии с драконами целоваться. Перелёт между ними 3 часа за 70-90 долларов.</p>
+                    <div class="pro-tip">
+                        <h3></h3>
+                        <p><strong>Если расслабиться и не париться:</strong> Малайзия. Всё работает, много кто говорит
+                            по-английски, удобно перемещаться.</p>
+
+                        <p><strong>Если приключений на жопу:</strong> Индонезия. Дикая природа, меньше туристов, больше
+                            аутентики.</p>
+
+                        <p><strong>А можно и так:</strong> Половину времени в Малайзии отдохнуть, половину в Индонезии с
+                            драконами целоваться. Перелёт между ними 3 часа за 70-90 долларов.</p>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
     </div>
 
     <script>
@@ -1011,18 +1584,96 @@
             // Hide all tab contents
             const tabContents = document.querySelectorAll('.tab-content');
             tabContents.forEach(content => content.classList.remove('active'));
-            
+
             // Remove active class from all tabs
             const tabs = document.querySelectorAll('.tab');
             tabs.forEach(tab => tab.classList.remove('active'));
-            
+
             // Show selected tab content
             document.getElementById(tabName).classList.add('active');
-            
+
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+
+        function showIslandTab(islandName) {
+            // Hide all island tab contents
+            const islandContents = document.querySelectorAll('#malaysia .tab-content');
+            islandContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all island tabs
+            const islandTabs = document.querySelectorAll('.island-tabs .tab');
+            islandTabs.forEach(tab => tab.classList.remove('active'));
+
+            // Show selected island content
+            const targetContent = document.getElementById(islandName);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+
+        function showLangkawiSection(sectionName) {
+            // Hide all langkawi sections
+            const langkawiSections = document.querySelectorAll('.langkawi-section');
+            langkawiSections.forEach(section => section.classList.remove('active'));
+
+            // Remove active class from langkawi sub-tabs
+            const langkawiTabs = document.querySelectorAll('#langkawi .tabs .tab');
+            langkawiTabs.forEach(tab => tab.classList.remove('active'));
+
+            // Show selected section
+            const targetSection = document.getElementById(sectionName);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+
+        function showPenangSection(sectionName) {
+            // Hide all penang sections
+            const penangSections = document.querySelectorAll('.penang-section');
+            penangSections.forEach(section => section.classList.remove('active'));
+
+            // Remove active class from penang sub-tabs
+            const penangTabs = document.querySelectorAll('#penang .tabs .tab');
+            penangTabs.forEach(tab => tab.classList.remove('active'));
+
+            // Show selected section
+            const targetSection = document.getElementById(sectionName);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+
+        function showKLSection(sectionName) {
+            // Hide all KL sections
+            const klSections = document.querySelectorAll('.kl-section');
+            klSections.forEach(section => section.classList.remove('active'));
+
+            // Remove active class from KL sub-tabs
+            const klTabs = document.querySelectorAll('#kuala-lumpur .tabs .tab');
+            klTabs.forEach(tab => tab.classList.remove('active'));
+
+            // Show selected section
+            const targetSection = document.getElementById(sectionName);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
             // Add active class to clicked tab
             event.target.classList.add('active');
         }
     </script>
 </body>
+
 </html>
-                
